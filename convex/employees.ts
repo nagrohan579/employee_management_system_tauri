@@ -82,7 +82,7 @@ export const update = mutation({
     if (updates.email) {
       const existing = await ctx.db
         .query("employees")
-        .withIndex("by_email", (q) => q.eq("email", updates.email))
+        .withIndex("by_email", (q) => q.eq("email", updates.email!))
         .first();
 
       if (existing && existing._id !== id) {

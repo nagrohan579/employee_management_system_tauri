@@ -42,7 +42,7 @@ export function EmployeeForm({ employee, onSuccess, onCancel, mode }: EmployeeFo
     position: "",
     salary: "",
     hireDate: "",
-    status: "active" as const,
+    status: "active" as "active" | "inactive" | "terminated",
     phone: "",
     address: "",
   });
